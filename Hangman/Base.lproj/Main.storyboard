@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <scenes>
+        <!--Hangman View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HangmanViewController" customModule="Hangman" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XVN-lx-YzN">
+                                <rect key="frame" x="180" y="117" width="250" height="250"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="iYW-HE-4sq"/>
+                                    <constraint firstAttribute="width" constant="250" id="vLF-J0-KkL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Kc-qo-F42">
+                                <rect key="frame" x="374" y="67" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Guess"/>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ifh-3h-TPf">
+                                <rect key="frame" x="252" y="404" width="97" height="35"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="h9S-OJ-bFq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehL-2R-N7g">
+                                <rect key="frame" x="180" y="67" width="83" height="30"/>
+                                <animations/>
+                                <state key="normal" title="New Game"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tOd-lK-uvY">
+                                <rect key="frame" x="180" y="375" width="250" height="21"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="cgb-hR-gsf"/>
+                                    <constraint firstAttribute="width" constant="250" id="lxP-em-Ttx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C9r-b3-RAa">
+                                <rect key="frame" x="265" y="447" width="71" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Start Over"/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="C9r-b3-RAa" firstAttribute="top" secondItem="Ifh-3h-TPf" secondAttribute="bottom" constant="8" id="53d-r1-Y9f"/>
+                            <constraint firstItem="7Kc-qo-F42" firstAttribute="trailing" secondItem="XVN-lx-YzN" secondAttribute="trailing" id="QKd-T4-JZj"/>
+                            <constraint firstItem="C9r-b3-RAa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="T47-6b-6hU"/>
+                            <constraint firstItem="Ifh-3h-TPf" firstAttribute="top" secondItem="tOd-lK-uvY" secondAttribute="bottom" constant="8" id="W08-VP-KCs"/>
+                            <constraint firstItem="ehL-2R-N7g" firstAttribute="leading" secondItem="XVN-lx-YzN" secondAttribute="leading" id="WB8-az-7ba"/>
+                            <constraint firstItem="tOd-lK-uvY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b9b-t1-h4e"/>
+                            <constraint firstItem="XVN-lx-YzN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ie1-ua-G4j"/>
+                            <constraint firstItem="tOd-lK-uvY" firstAttribute="top" secondItem="XVN-lx-YzN" secondAttribute="bottom" constant="8" id="nUQ-WA-tP3"/>
+                            <constraint firstItem="Ifh-3h-TPf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qgT-pJ-saY"/>
+                            <constraint firstItem="XVN-lx-YzN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="97" id="tbv-33-snL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guessButton" destination="7Kc-qo-F42" id="iVc-xg-vSC"/>
+                        <outlet property="guessedLabel" destination="tOd-lK-uvY" id="eXG-Hp-Nlo"/>
+                        <outlet property="imageView" destination="XVN-lx-YzN" id="LUp-Uj-P5n"/>
+                        <outlet property="letterInput" destination="Ifh-3h-TPf" id="BGT-ca-EQ6"/>
+                        <outlet property="newgameButton" destination="ehL-2R-N7g" id="H3O-pn-Ju3"/>
+                        <outlet property="startoverButton" destination="C9r-b3-RAa" id="xVx-eF-BhA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="245" y="348"/>
+        </scene>
+    </scenes>
+</document>
